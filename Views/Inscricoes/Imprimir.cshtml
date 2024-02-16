@@ -1,0 +1,42 @@
+﻿@model ProjetoBancoDeDados.Models.Inscricoes
+
+@{
+    ViewData["Title"] = "Imprimir";
+}
+
+<h1>Imprimir</h1>
+
+<div>
+    <h4>Inscricoes</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Eventos)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Eventos.Nome)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.PagamentoId)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.PagamentoId.ValorId)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Usuarios)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Usuarios.NomeId)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Passagens)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Passagens.DescricaoId)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model?.Id">Editar</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

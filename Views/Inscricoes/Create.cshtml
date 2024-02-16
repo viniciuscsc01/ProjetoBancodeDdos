@@ -1,0 +1,44 @@
+﻿@model ProjetoBancoDeDados.Models.Inscricoes
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>Inscricoes</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="EventosId" class="control-label"></label>
+                <select asp-for="EventosId" class ="form-control" asp-items="ViewBag.EventosId"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="PagamentosId" class="control-label"></label>
+                <select asp-for="PagamentosId" class ="form-control" asp-items="ViewBag.PagamentosId"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="UsuariosId" class="control-label"></label>
+,                <select asp-for="UsuariosId" class ="form-control" asp-items="ViewBag.UsuariosId"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="PassagensId" class="control-label"></label>
+                <select asp-for="PassagensId" class ="form-control" asp-items="ViewBag.PassagensId"></select>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
